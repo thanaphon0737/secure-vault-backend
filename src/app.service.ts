@@ -21,7 +21,7 @@ export class AppService {
           LIMIT 1
         ) as last_accessed_at
       FROM customers c
-      LEFT JOIN customer_secrets s ON c.id = s.customer_id);
+      LEFT JOIN customer_secrets s ON c.id = s.customer_id;
     `;
 
     return this.dataSource.query(sql);
